@@ -4,7 +4,18 @@
 ///////// I2C functions to get all values easier ///////////
 ////////////////////////////////////////////////////////////
 
-int MPU9150_readSensor(int addrI2C, int addrL, int addrH){
+FOXFIRE_MPU9150::FOXFIRE_MPU9150()
+{
+}
+
+boolean FOXFIRE_MPU9150::begin(void)
+{
+	//Wire.begin();
+
+	return true;
+}
+
+int FOXFIRE_MPU9150::readSensor(int addrI2C, int addrL, int addrH){
   Wire.beginTransmission(addrI2C);
   Wire.write(addrL);
   Wire.endTransmission(false);
@@ -22,7 +33,7 @@ int MPU9150_readSensor(int addrI2C, int addrL, int addrH){
   return (int16_t)((H<<8)+L);
 }
 
-int MPU9150_readSensor(int addrI2C, int addr){
+int FOXFIRE_MPU9150::readSensor(int addrI2C, int addr){
   Wire.beginTransmission(addrI2C);
   Wire.write(addr);
   Wire.endTransmission(false);
@@ -31,7 +42,7 @@ int MPU9150_readSensor(int addrI2C, int addr){
   return Wire.read();
 }
 
-int MPU9150_writeSensor(int addrI2C, int addr, int data){
+int FOXFIRE_MPU9150::writeSensor(int addrI2C, int addr, int data){
   Wire.beginTransmission(addrI2C);
   Wire.write(addr);
   Wire.write(data);

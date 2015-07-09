@@ -143,4 +143,13 @@
 #define MPU9150_CMPS_ZOUT_L        0x4E   // R
 #define MPU9150_CMPS_ZOUT_H        0x4F   // R
 
+class FOXFIRE_MPU9150 {
+	public :
+		FOXFIRE_FOXFIRE_MPU9150();
+		boolean begin(void);
+		int readSensor(int addrI2C, int addrL, int addrH);
+		int readSensor(int addrI2C, int addr);
+		int writeSensor(int addrI2C, int addr, int data)
+};
+
 #endif
