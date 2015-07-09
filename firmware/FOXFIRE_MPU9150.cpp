@@ -6,6 +6,7 @@
 
 FOXFIRE_MPU9150::FOXFIRE_MPU9150()
 {
+	_addr = 0x68;
 }
 
 boolean FOXFIRE_MPU9150::begin(void)

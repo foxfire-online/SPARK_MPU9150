@@ -145,11 +145,11 @@
 
 class FOXFIRE_MPU9150 {
 	public :
-		FOXFIRE_FOXFIRE_MPU9150();
+		FOXFIRE_MPU9150();
 		boolean begin(void);
 		int readSensor(int addrI2C, int addrL, int addrH);
 		int readSensor(int addrI2C, int addr);
-		int writeSensor(int addrI2C, int addr, int data)
+		int writeSensor(int addrI2C, int addr, int data);
 };
 
 #endif
