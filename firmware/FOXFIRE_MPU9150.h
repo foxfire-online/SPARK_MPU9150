@@ -146,7 +146,9 @@
 class FOXFIRE_MPU9150 {
 	public :
 		FOXFIRE_MPU9150();
-		boolean begin(void);
+		int _addr_compass;
+		int _addr_motion;
+		boolean begin(int addrI2C);
 		int readSensor(int addrI2C, int addrL, int addrH);
 		int readSensor(int addrI2C, int addr);
 		int writeSensor(int addrI2C, int addr, int data);
