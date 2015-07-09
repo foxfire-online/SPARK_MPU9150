@@ -42,6 +42,8 @@
 #ifndef _MPU9150_H_
 #define _MPU9150_H_
 
+#include "application.h"
+
 #define MPU9150_SELF_TEST_X        0x0D   // R/W
 #define MPU9150_SELF_TEST_Y        0x0E   // R/W
 #define MPU9150_SELF_TEST_X        0x0F   // R/W
